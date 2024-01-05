@@ -9,6 +9,7 @@ import (
 
 type Config struct {
 	TelegramToken string
+	DbFile        string
 }
 
 func GetConfig() (*Config, error) {
@@ -25,5 +26,6 @@ func GetConfig() (*Config, error) {
 
 	return &Config{
 		TelegramToken: os.Getenv("TELEGRAM_BOT_TOKEN"),
+		DbFile:        os.Getenv("DB_FILE"),
 	}, nil
 }
